@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using StructureMap;
 
 namespace Tch.YumlClient.UnitTests
@@ -11,11 +12,12 @@ namespace Tch.YumlClient.UnitTests
       [OneTimeSetUp]
       public void OneTimeSetup()
       {
-         Container = new Container(cfg => cfg.Scan(s =>
-         {
-            s.AssembliesAndExecutablesFromApplicationBaseDirectory(a => a.StartsWith("Mtch."));
-            s.LookForRegistries();
-         }));
+         Container = new Container(cfg => cfg.AddRegistry<MasterRegistry>());
       }
+   }
+
+   public abstract class UnitTestBase<TSUT> : UnitTestBase
+   {
+      public Func<TSUT> SUT => () => Container.GetInstance<TSUT>();
    }
 }
