@@ -3,7 +3,7 @@
 namespace Tch.YumlClient.Domain.Helpers
 {
    /// <summary>
-   /// Help class to parse http response
+   /// Helper class to parse http response
    /// </summary>
    internal class HttpResponseVm
    {

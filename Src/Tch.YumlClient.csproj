@@ -1,13 +1,27 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Mikhail Tchesnokov</Authors>
+    <Description>This repo contains small .Net client to communicate with online service **yuml.me** (https://yuml.me)</Description>
+    <PackageProjectUrl>https://github.com/mtchesnokov/Yuml-client</PackageProjectUrl>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageIconUrl>https://user-images.githubusercontent.com/25009369/74135640-f26fce00-4bec-11ea-8faf-8a7fdc6470ca.png</PackageIconUrl>
+    <PackageTags>yuml uml diagram client</PackageTags>
+    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>c:\GitHub\Yuml-client\Src\bin\Release\Tch.YumlClient.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Users\Tchesnokov\Downloads\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

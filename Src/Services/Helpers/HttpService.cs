@@ -7,6 +7,9 @@ using Tch.YumlClient.Interfaces.Helpers;
 
 namespace Tch.YumlClient.Services.Helpers
 {
+   /// <summary>
+   /// Implementation of <see cref="IHttpService"/>
+   /// </summary>
    internal class HttpService : IHttpService
    {
       public async Task<HttpResponseVm> PostUmlText(string dslText, string fileExtension)

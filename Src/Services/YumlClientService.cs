@@ -10,6 +10,9 @@ using Tch.YumlClient.Services.Helpers;
 
 namespace Tch.YumlClient.Services
 {
+   /// <summary>
+   ///    Implementation of <see cref="IYumlClientService" />
+   /// </summary>
    public class YumlClientService : IYumlClientService
    {
       private readonly IHttpService _httpService;

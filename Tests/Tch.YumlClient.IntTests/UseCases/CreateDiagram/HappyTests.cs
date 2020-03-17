@@ -5,7 +5,7 @@ using Tch.YumlClient.Domain.Objects;
 using Tch.YumlClient.Interfaces;
 using Tch.YumlClient.IntTests.TestExtensions;
 
-namespace Tch.YumlClient.IntTests.UseCases.YumlClientService
+namespace Tch.YumlClient.IntTests.UseCases.CreateDiagram
 {
    [Explicit]
    public class HappyTests : IntegrationTestBase<IYumlClientService>

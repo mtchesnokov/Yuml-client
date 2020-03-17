@@ -21,9 +21,11 @@ namespace Tch.YumlClient.DemoApp
 
          DiagramFile diagramFile = await clientService.BuildDiagram(umlStrings, FileFormat.Svg);
 
-         Console.WriteLine(diagramFile.FileName);
-         Console.WriteLine(diagramFile.ContentType);
-         Console.WriteLine(diagramFile.Content.Length);
+         new{FileName = diagramFile.FileName, ContentType = diagramFile.ContentType, Content = diagramFile.Content=new byte[]{12,3}}.Print();
+
+         //Console.WriteLine(diagramFile.FileName);
+         //Console.WriteLine(diagramFile.ContentType);
+         //Console.WriteLine(diagramFile.Content.Length);
       }
    }
 }
